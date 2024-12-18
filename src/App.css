@@ -1,0 +1,108 @@
+/* login */
+
+/*GENERAL*/
+* {
+    margin: 0px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+  }
+  
+  .section-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height:80vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+ 
+  }
+  .form-container {
+   
+    display: flex;
+    flex-direction:row;
+    gap: 5rem;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 5px 3px #4E9F3D;
+    padding: 3rem;
+    margin-top: 2rem;
+  }
+
+
+.logo-section{
+    display: flex;
+    gap:2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+.login-section{
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+  .form-container input {
+    width: 17rem;
+    height: 2rem;
+    font-size: 1.1rem;
+    padding: 0.4rem;
+    padding-left: 0.8rem;
+    color: #05221e;
+  }
+  
+  button {
+    border: none;
+    width: auto;
+    height: auto;
+    font-size: 1.2rem;
+    padding: 1rem 3rem;
+    border-radius: 15px;
+  }
+  #regbtnlog {
+    margin-top: 1.3rem;
+    background-color:#26554f;
+    color:#fff;
+    cursor: pointer;
+  }
+  #regbtnlog:hover{
+    background-color: #05221e;
+    color: #fff;
+  }
+  .admin-section,.pass-section{
+    display: flex;
+    flex-direction: row;
+    gap:1rem;
+    justify-content: center;
+    align-items: center; 
+  }
+.logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;  
+}
+.logotxt{
+    font-size: 2rem;
+    color: green;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight:800;
+    padding-bottom: 2rem;
+    
+}
+.greetings{
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight:800;
+    text-align: center;
+    color: #05221e;
+}
+
