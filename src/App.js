@@ -1,12 +1,13 @@
 import './App.css';
-import Form from './components/Form';
-
+import Dashboard from './components/Dashboard';
+/* import Login from './components/Login';
+ */
 function App() {
   return (
     <div className="App">
-     <p>Hello React , I m Nambi Raja</p>
      <div>
-      <Form />;
+      {/* <Login />; */}
+      <Dashboard />;
     </div>
     </div>
   );

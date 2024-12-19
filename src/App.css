@@ -6,103 +6,201 @@
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
+    z-index: 1001;
 
-  }
-  
-  .section-container {
+}
+
+.section-container {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    height:80vh;
+    height: 100%;
     width: 100%;
     align-items: center;
     justify-content: center;
- 
-  }
-  .form-container {
-   
+    margin-top: 5rem;
+}
+
+.form-container {
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     gap: 5rem;
-    align-items: center;
-    justify-content: center;
     box-shadow: 0px 0px 5px 3px #4E9F3D;
     padding: 3rem;
     margin-top: 2rem;
-  }
-
-
-.logo-section{
-    display: flex;
-    gap:2rem;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
+    /*  background-color:; */
 }
-.login-section{
+
+
+.logo-section {
     display: flex;
     gap: 2rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 2rem;
+}
+
+.login-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 
 
-  .form-container input {
+.form-container input {
     width: 17rem;
     height: 2rem;
     font-size: 1.1rem;
     padding: 0.4rem;
     padding-left: 0.8rem;
     color: #05221e;
-  }
-  
-  button {
+    background-color: #D9EDBF;
+    border: 2px solid #4E9F3D;
+}
+
+::placeholder {
+    color: gray;
+}
+
+button {
     border: none;
     width: auto;
     height: auto;
     font-size: 1.2rem;
     padding: 1rem 3rem;
     border-radius: 15px;
-  }
-  #regbtnlog {
-    margin-top: 1.3rem;
-    background-color:#26554f;
-    color:#fff;
+}
+
+#regbtnlog {
+    margin-top: 1.5rem;
+    background-color: #45474B;
+    color: #fff;
     cursor: pointer;
-  }
-  #regbtnlog:hover{
+
+}
+
+#regbtnlog:hover {
     background-color: #05221e;
     color: #fff;
-  }
-  .admin-section,.pass-section{
+}
+
+.admin-section,
+.pass-section {
     display: flex;
     flex-direction: row;
-    gap:1rem;
+    gap: 1rem;
     justify-content: center;
-    align-items: center; 
-  }
-.logo{
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.logo {
     width: 100px;
     height: 100px;
-    border-radius: 50%;  
+    border-radius: 50%;
 }
-.logotxt{
+
+.logotxt {
     font-size: 2rem;
-    color: green;
+    color: #05221e;
     font-family: "Dancing Script", cursive;
     font-optical-sizing: auto;
-    font-weight:800;
+    font-weight: 800;
     padding-bottom: 2rem;
-    
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+
+    /*     background-color:#; */
+
 }
-.greetings{
+
+.greetings {
     font-family: "Dancing Script", cursive;
     font-optical-sizing: auto;
-    font-weight:800;
+    font-weight: 800;
     text-align: center;
     color: #05221e;
+    padding-bottom: 2rem;
 }
+/* .login-person{
+  position:absolute;
+  width: 300px;
+  height: 300px;
+  top: 17.5rem;
+  left: 40%;
+}
+
+
+ */
+
+/* DASHBOARD */
+
+.sidebar-container{
+    max-width: 300px;
+    height: 100vh;
+    margin: 1rem;
+    background-color: #45474B;
+    border-radius: 15px;
+}
+.sidebar-sections{
+    padding-top: 2rem;
+}
+.logos-section{
+    display:flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.logodash{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+
+.logotxtdash {
+    font-size: 1.4rem;
+    color:#fff;
+}
+
+/* MENU SECTION */
+.menus-section{
+    padding-top: 2rem;
+    list-style-type: none;
+    color: #fff;
+   margin-left: 0;
+   padding-left: 0rem;
+}
+.menus-section li{
+    display: flex;
+    justify-content:start;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.67rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    
+}
+.menus-section li:hover{
+    background-color:#686D76; 
+}
+.logoutfunc{
+    text-align:center;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    left: -20px;
+}
+.active{
+    background-color:#686D76; 
+}
+
+
+
+
+
 
