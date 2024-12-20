@@ -1,32 +1,40 @@
+import Overview from './mini-components/overview';
+import Sidebar from './mini-components/sidebar';
+import { Avatar } from '@mui/material';
+import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
+import SearchBar from './mini-components/SearchBar';
 
-import SpaceDashboardIcon from '@mui/icons-material/SpaceDashboard';
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
-import PeopleOutlineOutlinedIcon from '@mui/icons-material/PeopleOutlineOutlined';
-import AssessmentOutlinedIcon from '@mui/icons-material/AssessmentOutlined';
-import SettingsApplicationsOutlinedIcon from '@mui/icons-material/SettingsApplicationsOutlined';
-import AdminPanelSettingsOutlinedIcon from '@mui/icons-material/AdminPanelSettingsOutlined';
-import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
+
 function Dashboard() {
     return (
         <>
-            <div className="sidebar-container">
-                <div className="sidebar-sections">
-                    <div className="logos-section">
-                        <img className="logodash" src="/assets/logo_green_bg.jpeg" alt="logo" />
-                        <p className="logotxtdash">Green Bowl </p>
+            <div className="dashboard-container">
+                <Sidebar />;
+                <div className='centre-section'>
+                    <div className='navbar-section'>
+                        <div className='search'>
+                            <SearchBar style={{ position: "relative", left: "0" }} />
+                        </div>
+
+                        <div className='vline'></div>
+                        <NotificationsNoneIcon style={{ fontSize: "1.899rem",cursor:"pointer",fill:"white" }} />
+
+                        <div className='vline'></div>
+                        <Avatar alt='avatar' src='/assets/avatar.png' sx={{ width: 30, height: 30 }} className='avatar' />
                     </div>
-                    <div >
-                        <ul className="menus-section">
-                            <li className='active'><SpaceDashboardIcon />Dashboard</li>
-                            <li> <ShoppingCartOutlinedIcon/> Order Management</li>
-                            <li><MenuBookOutlinedIcon/> Menu Management</li>
-                            <li><PeopleOutlineOutlinedIcon/> Customer Management</li>
-                            <li><AssessmentOutlinedIcon />Reports and Analytics</li>
-                            <li> <SettingsApplicationsOutlinedIcon/>Settings</li>
-                            <li><AdminPanelSettingsOutlinedIcon/> Authentication and Security</li>
-                        </ul>
-                       <p className='logoutfunc'> <LogoutOutlinedIcon />Logout</p>
+                    <div className='main-section'>
+                        <div className='details-section'>
+                            <div className='article-section'>
+                                <p>Total Orders</p>
+                                <p>0</p>
+                            </div>
+                            <div className='circle'> <img src='/assets/totalorders.svg' alt='icon'
+                                style={{
+                                    width: "30px", height: "30px",
+                                }} />
+                            </div>
+                        </div>
+                        <Overview />
                     </div>
                 </div>
 
