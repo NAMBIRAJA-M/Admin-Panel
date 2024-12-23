@@ -10,6 +10,10 @@
 
 }
 
+::-webkit-scrollbar {
+display: none;
+}
+
 .section-container {
     display: flex;
     flex-direction: column;
@@ -149,8 +153,11 @@ button {
     height: 95vh;
     margin: 1rem;
     margin-top: 0.3rem;
+    margin-bottom: 0rem;
     background-color: #45474B;
     border-radius: 15px;
+    position: relative;
+    z-index: 1002;
 }
 
 .logos-section {
