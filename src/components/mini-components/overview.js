@@ -1,40 +1,41 @@
 
-const data = [
-    {
-        heading: "Total Orders",
-        value: 0,
-        src: "/assets/totalorders.svg",
-    },
-    {
-        heading: "Pending Orders",
-        value: 0,
-        src: "/assets/pending.svg",
-    },
-    {
-        heading: "Total Delivery",
-        value: 0,
-        src: "/assets/truck.svg",
-    },
-    {
-        heading: "Total Menus",
-        value: 0,
-        src: "/assets/menu-down.svg",
-    }, {
-        heading: "No. Of Employees",
-        value: 0,
-        src: "/assets/people.svg",
-    }, {
-        heading: "Earnings",
-        value: 0,
-        src: "/assets/currency-rupee.svg",
-    }
-]
 
 
 
-
-
-function Overview() {
+function Overview(props) {
+    const data = [
+        {
+            heading: "Total Orders",
+            value: props.orderscount,
+            src: "/assets/totalorders.svg",
+        },
+        {
+            heading: "Pending Orders",
+            value: 0,
+            src: "/assets/pending.svg",
+        },
+        {
+            heading: "Total Delivery",
+            value: 0,
+            src: "/assets/truck.svg",
+        },
+        {
+            heading: "Total Menus",
+            value: 0,
+            src: "/assets/menu-down.svg",
+        }, {
+            heading: "No. Of Employees",
+            value: 0,
+            src: "/assets/people.svg",
+        }, {
+            heading: "Earnings",
+            value: 0,
+            src: "/assets/currency-rupee.svg",
+        }
+    ]
+    
+    
+    
     return (
         <>
             <div className="overview-section">
