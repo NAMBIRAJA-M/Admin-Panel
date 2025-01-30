@@ -1,8 +1,11 @@
 import './App.css';
 import Dashboard from './components/Dashboard';
-import WebsocketClient from './components/mini-components/websocketClient';
+import ChatSection from './components/mini-components/ChatSection';
+import WebsocketClient from './components/WebsocketClient';
+
 /* import Login from './components/Login'; */
-import ChatSection from './components/mini-components/chatSection';
+
+
 
 function App() {
   return (
@@ -13,6 +16,7 @@ function App() {
         <Dashboard />;
         <WebsocketClient />
         <ChatSection />
+
       </div>
     </div>
   );

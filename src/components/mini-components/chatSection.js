@@ -21,6 +21,7 @@ function ChatSection() {
                 <div className="chat-section">
                     {console.log("running succesfully from func", clientMsg)}
                     {clientMsg.map((msg, index) => {
+                        
                         console.log("running succesfully from map func",index, msg);
                         return(
                         <p key={index} className="client" > {msg}</p>
@@ -33,7 +34,7 @@ function ChatSection() {
 
                 </div>
 
-                <div class="chatbox-inputfield">
+                <div className="chatbox-inputfield">
                     <input id="messageInput" placeholder="Type a message" /* onChange={sendMessage} */ />
                     <div className="icon-holder">
                         <img src="/assets/send.png" className="sendbtn" alt='sendimage' onClick={sendMessage} />
