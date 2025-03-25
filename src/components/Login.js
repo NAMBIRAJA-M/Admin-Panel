@@ -1,6 +1,8 @@
 import React from "react";
 import PersonSharpIcon from '@mui/icons-material/PersonSharp';
 import HttpsIcon from '@mui/icons-material/Https';
+import { useNavigate} from "react-router-dom";
+
 
 
 export default function Login() {
@@ -16,6 +18,10 @@ export default function Login() {
     fontFamily: "Poppins",
     fontWeight:"600",
   };
+  const navigate = useNavigate();
+     const [isAuthenticated, setAuthenticated] = React.useState(
+      sessionStorage.getItem("isAuthenticated") === "true"
+     );
   function handlePassword(event) {
     const secure = event.target.value;
     setError(false);
@@ -26,13 +32,19 @@ export default function Login() {
     event.preventDefault();
     let confirmpassword='1234';
     if(password===confirmpassword){
-      
-      alert("okie you can go now");
+      sessionStorage.setItem("isAuthenticated", "true");
+      setAuthenticated(true);
     }
     else{
       setError(true);
     }
+    
   }
+  React.useEffect(() => {
+    if (isAuthenticated) {
+       navigate("/dashboard");
+    }
+ }, [isAuthenticated, navigate]);
 
   return (
     <div className="">

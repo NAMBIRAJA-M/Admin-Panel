@@ -1,9 +1,11 @@
-import  { useEffect } from 'react';
-const message={
-      id:18,
-    AdminName:"Raja",
-    type:"admin",
-    action:"chat",
+import { useEffect } from 'react';
+import ChatSection from './mini-components/ChatSection';
+
+const message = {
+    id: 18,
+    AdminName: "Raja",
+    type: "client",
+    action: "chat",
     content: "hi chellam",
 
 };
@@ -15,10 +17,10 @@ function WebsocketClient() {
         socket.onopen = function (e) {
             console.log('connection opened');
             socket.send(JSON.stringify(message))
-              
+
         }
         socket.onmessage = function (clientMessage) {
-            console.log("message from server",clientMessage.data);
+            console.log("message from server", clientMessage.data);
             socket.send(JSON.stringify(message))
         }
         socket.onerror = function (error) {
@@ -27,8 +29,13 @@ function WebsocketClient() {
 
     }, []);
 
-    return
- 
+    return (
+
+        <div>
+            <ChatSection clientMessage={message}/>
+        </div>
+
+    )
 
 }
 

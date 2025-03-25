@@ -1,8 +1,11 @@
 
 
+import MenuData from '../Resources/MenuData';
 
 
 function Overview(props) {
+    const menuItems=MenuData();
+  
     const data = [
         {
             id:1,
@@ -13,7 +16,7 @@ function Overview(props) {
         {
             id:2,
             heading: "Pending Orders",
-            value: 0,
+            value: props.orderscount,
             src: "/assets/pending.svg",
         },
         {
@@ -25,7 +28,7 @@ function Overview(props) {
         {
             id:4,
             heading: "Total Menus",
-            value: 0,
+            value: menuItems.length,
             src: "/assets/menu-down.svg",
         }, {
             id:5,
